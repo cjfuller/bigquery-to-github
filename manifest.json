@@ -1,20 +1,20 @@
 {
   "manifest_version": 2,
 
-  "name": "Save BigQuery to GitHub",
-  "description": "Adds a button to the BigQuery UI to save a query directly to a GitHub repository",
-  "version": "0.7",
+  "name": "Mode query to GitHub",
+  "description": "Send your queries from mode analytics to github for code review",
+  "version": "0.0.1",
 
   "icons": { "48": "exticon.png", "96": "exticon96.png" },
 
   "content_scripts": [
     {
-      "matches": ["https://bigquery.cloud.google.com/*"],
-      "js": ["jquery-1.11.2.min.js", "bigquery_content.js"]
+      "matches": ["https://modeanalytics.com/*"],
+      "js": ["jquery-3.3.1.min.js", "mode_content.js"]
     }
   ],
   "background": {
-    "scripts": ["jquery-1.11.2.min.js", "secrets.js", "save_event.js"],
+    "scripts": ["jquery-3.3.1-min.js", "secrets.js", "save_event.js"],
     "persistent": false
   },
   "permissions": [
